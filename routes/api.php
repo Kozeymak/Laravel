@@ -3,9 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Articles;
-use App\Http\Controllers\AuthController;    
-use App\Http\Controllers\ArticleController;    
-use App\Http\Controllers\ArticleCommentsController;    
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ArticleCommentsController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,7 +30,7 @@ Route::group(['prefix'=>'comment', 'middleware' => 'auth:sanctum'], function(){
 });
 
 //public routes
-Route::get('/registration', [AuthController::class, 'index']);
+Route::get('/registration', [AuthController::class, 'registration']);
 Route::get('/auth/signin', [AuthController::class, 'login'])->name('login');
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
